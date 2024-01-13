@@ -42,6 +42,7 @@ int main() {
 	HANDLE hThread;
 	void* exec_mem;
 
+	// update last param with PID
 	hProcess = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, FALSE, 9948);
 	if (hProcess == NULL) {
 		printf("OpenProcess failed with error %d\n", GetLastError());
